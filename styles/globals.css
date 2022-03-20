@@ -1,16 +1,49 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
+@layer base {
+    body {
+        @apply dark:bg-gray-900 dark:text-gray-100;
+    }
 
-* {
-  box-sizing: border-box;
+    ::selection {
+        @apply text-white bg-indigo-500;
+    }
+
+    code, h1, h2, h3, h4, h5, h6, ol, a, li::marker, blockquote, strong {
+        @apply dark:text-white;
+    }
+
+    .card-content {
+        @apply dark:border-gray-500;
+    }
+
+    .card-content-other {
+        @apply dark:border-gray-300;
+    }
+
+    .lines {
+        @apply dark:border-gray-500;
+    }
+
+    .post-date {
+        @apply dark:text-white;
+    }
+
+    .invert-png {
+        filter: invert(100%) brightness(100%) contrast(100%);
+    }
+
+    .dark-png {
+        @apply dark:invert-png;
+    }
+
+    .darker-bg {
+        @apply bg-gray-800 border-black hover:bg-gray-700;
+    }
+
+    .dark-card {
+        @apply dark:darker-bg;
+    }
 }
