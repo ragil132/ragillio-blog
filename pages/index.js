@@ -2,6 +2,7 @@ import fs from 'fs';
 import matter from 'gray-matter';
 import Image from 'next/image';
 import Link from 'next/link';
+import Head from 'next/head';
 
 export default function Home({ posts }) {
 
@@ -9,6 +10,9 @@ export default function Home({ posts }) {
 
   return (
     <div className="mt-12">
+      <Head>
+        <title>R-Verse Blog</title>
+      </Head>
       <div className="md:text-5xl text-4xl mx-12 mb-5">
         <h1 className="font-bold mx-auto mb-5 text-center md:text-left lg:text-left">Latest Post 👇</h1>
         <hr className='lines' />
@@ -70,6 +74,7 @@ export default function Home({ posts }) {
         ))}
       </div>
     </div>
+
   )
 }
 

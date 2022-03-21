@@ -1,10 +1,14 @@
 import fs from 'fs';
 import matter from 'gray-matter';
 import md from 'markdown-it';
+import Head from 'next/head';
 
 export default function PostPage({ frontmatter, content }) {
     return (
         <div className='prose mx-auto dark:text-white'>
+            <Head>
+                <title>{frontmatter.title + ' | R-Verse Blog'}</title>
+            </Head>
             <h1 className='dark:text-white'>{frontmatter.title}</h1>
             <p className='text-sm text-slate-500 dark:text-white mt-1'>Author: Ragillio Aji</p>
             <p className='text-sm text-slate-500 dark:text-white mt-1'>Posted: {frontmatter.date}</p>
