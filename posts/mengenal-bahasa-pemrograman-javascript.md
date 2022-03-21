@@ -9,7 +9,7 @@ tags:
   - programming
 ---
 
-JavaScript. Ya, saya tau bagi kalian yang baca artikel ini mungkin beberapa sudah mengerti apa *sih* JavaScript itu. Jadi, *gpp* lah ya sekedar mengingat kembali defisininya 😅, dan bagi yang baru terjun ke dunia *web development*, kalian **wajib** tahu apa itu JavaScript.
+JavaScript. Ya, saya tau bagi kalian yang baca artikel ini mungkin beberapa sudah mengerti apa *sih* JavaScript itu. Jadi, *gpp* lah ya sekedar mengingat kembali definisinya 😅, dan bagi yang baru terjun ke dunia *web development*, kalian **wajib** tahu apa itu JavaScript.
 
 ![Illustrasi Javascript oleh [Juanjo Jaramillo](https://unsplash.com/photos/mZnx9429i94?utm_source=63921&utm_medium=referral)](https://images.unsplash.com/photo-1619410283995-43d9134e7656?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb)
 
