@@ -10,9 +10,16 @@ export default function PostPage({ frontmatter, content }) {
                 <title>{frontmatter.title + ' | R-Verse Blog'}</title>
             </Head>
             <h1 className='dark:text-white'>{frontmatter.title}</h1>
-            <p className='text-sm text-slate-500 dark:text-white mt-1'>Author: Ragillio Aji</p>
-            <p className='text-sm text-slate-500 dark:text-white mt-1'>Posted: {frontmatter.date}</p>
-            <p className='text-sm text-slate-500 dark:text-white mt-1'>Tags: {frontmatter.tags.map((tag) =>
+            <p className='text-sm text-slate-500 dark:text-white mt-1'>Author &nbsp;: Ragillio Aji</p>
+            <p className='text-sm text-slate-500 dark:text-white mt-1'>Posted &nbsp;: {
+                new Date(frontmatter.date).toLocaleDateString("id-ID", {
+                    weekday: "long",
+                    year: "numeric",
+                    month: "long",
+                    day: "numeric"
+                })
+            }</p>
+            <p className='text-sm text-slate-500 dark:text-white mt-1'>Tags &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: {frontmatter.tags.map((tag) =>
                 <span className={'rounded-sm shadow-md p-1 mr-1 text-white ' + (tag === 'nextjs' ? 'bg-gray-500' : tag === 'javascript' ? 'bg-yellow-500' : tag === 'nodejs' ? 'bg-teal-500' : tag === 'programming' ? 'bg-blue-500' : 'bg-red-500')}>{tag}</span>
             )}</p>
             <div className='dark:text-white' dangerouslySetInnerHTML={{ __html: md().render(content) }} />

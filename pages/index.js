@@ -34,7 +34,15 @@ export default function Home({ posts }) {
               <h1 className='md:text-3xl lg:text-3xl font-bold mb-2'>{latestPost.frontmatter.title}</h1>
             </a>
           </Link>
-          <p className='text-sm text-slate-500 mb-5 post-date'>Posted: {latestPost.frontmatter.date}</p>
+          <p className='text-sm text-slate-500 mb-5 post-date'>Posted: {
+            new Date(latestPost.frontmatter.date).toLocaleDateString("id-ID", {
+        weekday: "long",
+        year: "numeric",
+        month: "long",
+        day: "numeric"
+    })
+          
+          }</p>
           <p className='text-sm'>
             {latestPost.frontmatter.tags.map((tag) =>
               <span className={'rounded-md text-white p-2 mr-1 ' + (tag === 'nextjs' ? 'bg-gray-500' : tag === 'javascript' ? 'bg-yellow-500' : tag === 'nodejs' ? 'bg-teal-500' : tag === 'programming' ? 'bg-blue-500' : 'bg-red-500')}>{tag}</span>
@@ -61,7 +69,15 @@ export default function Home({ posts }) {
                   alt={frontmatter.title}
                   src={`/${frontmatter.socialImage}`}
                 />
-                <p className='pt-5 pb-0 mb-1 px-5 text-slate-500 post-date'>Posted: {frontmatter.date}</p>
+                <p className='pt-5 pb-0 mb-1 px-5 text-slate-500 post-date'>Posted: {
+                        new Date(
+                          frontmatter.date).toLocaleDateString("id-ID", {
+                          weekday: "long",
+                          year: "numeric",
+                          month: "long",
+                          day: "numeric"
+                      })
+                }</p>
                 <p className='px-5 mt-5 mb-3 text-sm'>
                   {frontmatter.tags.map((tag) =>
                     <span className={'rounded-md text-white p-2 mr-1 ' + (tag === 'nextjs' ? 'bg-gray-500' : tag === 'javascript' ? 'bg-yellow-500' : tag === 'nodejs' ? 'bg-teal-500' : tag === 'programming' ? 'bg-blue-500' : 'bg-red-500')}>{tag}</span>
