@@ -30,7 +30,7 @@ export default function Layout({ children }) {
 
     return (
         <div className='flex flex-col min-h-screen'>
-            <header className='bg-gray-100 dark:bg-gray-800 shadow-sm mb-8 py-5'>
+            <header className='bg-gray-100 dark:bg-gray-800 shadow-sm mb-8 py-5 md:sticky sm:sticky lg:sticky xl:sticky 2xl:sticky top p-5 top-0 z-10 backdrop-filter backdrop-blur-lg border-b border-gray-100 dark:border-0 bg-opacity-30 dark:bg-opacity-30 firefox:bg-opacity-90'>
                 <div className='container mx-auto flex justify-center'>
                     <Link href='/'>
                         <a className="md:ml-7 ml-5 p-1 border-2 border-black dark:border-white rounded-lg"><img className="fill-current w-6 dark-png" src="/logo.png" alt="logo" /></a>
@@ -42,7 +42,7 @@ export default function Layout({ children }) {
             <main className='container md:mx-auto px-5 flex-1'>{children}</main>
             <footer className='bg-gray-100 dark:bg-gray-800 mt-8 py-4'>
                 <div className='container mx-auto flex justify-center'>
-                    &copy; 2022 Made with ❤️ by Ragillio Aji
+                    &copy; {new Date().getFullYear()} Made with ❤️ by Ragillio Aji
                 </div>
             </footer>
         </div>
