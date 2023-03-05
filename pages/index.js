@@ -12,6 +12,7 @@ export default function Home({ posts }) {
     <div className="mt-12">
       <Head>
         <title>R-Verse Blog</title>
+        <script async defer src="https://analytics.umami.is/script.js" data-website-id="b6a929f7-5104-40c4-8576-a1e647af9530"></script>
       </Head>
       <div className="md:text-5xl text-4xl mx-12 mb-5">
         <h1 className="font-bold mx-auto mb-5 text-center md:text-left lg:text-left">Latest Post 👇</h1>
@@ -36,12 +37,12 @@ export default function Home({ posts }) {
           </Link>
           <p className='text-sm text-slate-500 mb-5 post-date'>Posted: {
             new Date(latestPost.frontmatter.date).toLocaleDateString("id-ID", {
-        weekday: "long",
-        year: "numeric",
-        month: "long",
-        day: "numeric"
-    })
-          
+              weekday: "long",
+              year: "numeric",
+              month: "long",
+              day: "numeric"
+            })
+
           }</p>
           <p className='text-sm'>
             {latestPost.frontmatter.tags.map((tag) =>
@@ -70,13 +71,13 @@ export default function Home({ posts }) {
                   src={`/${frontmatter.socialImage}`}
                 />
                 <p className='pt-5 pb-0 mb-1 px-5 text-slate-500 post-date'>Posted: {
-                        new Date(
-                          frontmatter.date).toLocaleDateString("id-ID", {
-                          weekday: "long",
-                          year: "numeric",
-                          month: "long",
-                          day: "numeric"
-                      })
+                  new Date(
+                    frontmatter.date).toLocaleDateString("id-ID", {
+                      weekday: "long",
+                      year: "numeric",
+                      month: "long",
+                      day: "numeric"
+                    })
                 }</p>
                 <p className='px-5 mt-5 mb-3 text-sm'>
                   {frontmatter.tags.map((tag) =>
